@@ -35,8 +35,12 @@ classifiers = [
 [project.optional-dependencies]
 dev = ["build", "twine"]
 
+[project.urls]
+repository = "https://github.com/freddyaboulton/gradio-calendar"
+space = "https://huggingface.co/spaces/freddyaboulton/gradio_calendar/settings"
+
 [tool.hatch.build]
-artifacts = ["/backend/gradio_calendar/templates", "*.pyi", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates"]
+artifacts = ["/backend/gradio_calendar/templates", "*.pyi", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["/backend/gradio_calendar"]
