@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gradio_calendar"
-version = "0.0.2"
+version = "0.0.6"
 description = "Gradio component for selecting dates with a calendar 📆"
 readme = "README.md"
 license = "MIT"
@@ -16,7 +16,7 @@ requires-python = ">=3.8"
 authors = [{ name = "YOUR NAME", email = "YOUREMAIL@domain.com" }]
 keywords = ["gradio-custom-component", "gradio-template-Fallback", "time", "calendar", "forms"]
 # Add dependencies here
-dependencies = ["gradio>=4.0,<5.0"]
+dependencies = ["gradio>=4.0,<6.0"]
 classifiers = [
   'Development Status :: 3 - Alpha',
   'License :: OSI Approved :: Apache Software License',
@@ -37,10 +37,10 @@ dev = ["build", "twine"]
 
 [project.urls]
 repository = "https://github.com/freddyaboulton/gradio-calendar"
-space = "https://huggingface.co/spaces/freddyaboulton/gradio_calendar/settings"
+space = "https://huggingface.co/spaces/freddyaboulton/gradio_calendar"
 
 [tool.hatch.build]
-artifacts = ["/backend/gradio_calendar/templates", "*.pyi", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates"]
+artifacts = ["/backend/gradio_calendar/templates", "*.pyi", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates", "backend/gradio_calendar/templates"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["/backend/gradio_calendar"]

@@ -1,12 +1,12 @@
 
 # `gradio_calendar`
-<a href="https://pypi.org/project/gradio_calendar/" target="_blank"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/gradio_calendar"></a> <a href="https://github.com/freddyaboulton/gradio-calendar/issues" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Issues-white?logo=github&logoColor=black"></a> <a href="https://huggingface.co/spaces/freddyaboulton/gradio_calendar/settings/discussions" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%A4%97%20Discuss-%23097EFF?style=flat&logoColor=black"></a>
+<a href="https://pypi.org/project/gradio_calendar/" target="_blank"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/gradio_calendar"></a> <a href="https://github.com/freddyaboulton/gradio-calendar/issues" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Issues-white?logo=github&logoColor=black"></a> <a href="https://huggingface.co/spaces/freddyaboulton/gradio_calendar/discussions" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%A4%97%20Discuss-%23097EFF?style=flat&logoColor=black"></a>
 
 Gradio component for selecting dates with a calendar 📆
 
 ## Installation
-    
-```bash 
+
+```bash
 pip install gradio_calendar
 ```
 
@@ -64,7 +64,7 @@ str | datetime.datetime
 <td align="left" style="width: 25%;">
 
 ```python
-Literal["string", "datetime"]
+"string" | "datetime"
 ```
 
 </td>
@@ -220,7 +220,10 @@ bool
 <td align="left" style="width: 25%;">
 
 ```python
-Callable[..., Any] | None
+typing.Optional[typing.Callable[..., typing.Any]][
+    typing.Callable[..., typing.Any][Ellipsis, typing.Any],
+    None,
+]
 ```
 
 </td>
@@ -257,12 +260,13 @@ float | None
 
 The impact on the users predict function varies depending on whether the component is used as an input or output for an event (or both).
 
-- When used as an Input, the component only impacts the input signature of the user function. 
-- When used as an output, the component only impacts the return signature of the user function. 
+- When used as an Input, the component only impacts the input signature of the user function.
+- When used as an output, the component only impacts the return signature of the user function.
 
 The code snippet below is accurate in cases where the component is used as both an input and an output.
 
-
+- **As output:** Is passed, the preprocessed input data sent to the user's function in the backend.
+- **As input:** Should return, the output data received by the component from the user's function in the backend.
 
  ```python
  def predict(
